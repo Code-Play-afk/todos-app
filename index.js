@@ -9,7 +9,6 @@
 //     },
 //   ])
 // );
-let toDos = JSON.parse(localStorage.getItem("task"));
 
 // Create
 function createToDo(task, description) {
@@ -35,7 +34,7 @@ function removeToDo(idToDelete) {
   const todoString = JSON.stringify(toDos);
   localStorage.setItem("task", todoString);
 }
-
+let toDos = JSON.parse(localStorage.getItem("task"));
 // *View
 
 renderToDo();
