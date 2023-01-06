@@ -124,9 +124,7 @@ textarea:focus {
   font-size: 23px;
   line-height: 40px;
 }
-.Todo__Items > h3 {
-  width: 80%;
-}
+
 .Delete__Btn {
   margin-left: 10px;
   height: 40px;
