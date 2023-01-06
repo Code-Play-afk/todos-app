@@ -55,7 +55,7 @@ function renderToDo() {
     deleteBtn.addEventListener("click", deleteToDo);
     deleteBtn.id = toDo.id;
     container.appendChild(element);
-    element.firstElementChild.append(deleteBtn);
+    element.lastElementChild.append(deleteBtn);
   });
 }
 
