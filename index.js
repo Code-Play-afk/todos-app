@@ -49,7 +49,7 @@ function renderToDo() {
     element.innerHTML = `<h3>${toDo.task}</h3><p>${toDo.description}</p>`;
     const deleteBtn = document.createElement("button");
     deleteBtn.classList.add("Delete__Btn");
-    deleteBtn.innerText = "Delete Task";
+    deleteBtn.innerText = "Delete Note";
     deleteBtn.addEventListener("click", deleteToDo);
     deleteBtn.id = toDo.id;
     container.appendChild(element);
