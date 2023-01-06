@@ -11,6 +11,7 @@ if (toDos === null) {
       },
     ])
   );
+  toDos = JSON.parse(localStorage.getItem("task"));
 }
 
 // Create
