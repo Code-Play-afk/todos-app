@@ -1,4 +1,5 @@
 // *Model
+let toDos = JSON.parse(localStorage.getItem("task"));
 if (toDos === null) {
   localStorage.setItem(
     "task",
@@ -11,7 +12,6 @@ if (toDos === null) {
     ])
   );
 }
-let toDos = JSON.parse(localStorage.getItem("task"));
 
 // Create
 function createToDo(task, description) {
