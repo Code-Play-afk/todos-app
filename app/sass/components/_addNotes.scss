@@ -1,0 +1,50 @@
+@use "../abstracts" as abs;
+
+#Add__Notes {
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 500px;
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.7);
+
+  .Add__Notes__Items {
+    input {
+      font-size: 16px;
+      width: 100%;
+    }
+  }
+
+  .Title__Container {
+    #Notes__Description {
+      padding-left: 12px;
+      height: 20px;
+      font-size: 16px;
+      max-width: 100%;
+      min-width: 100%;
+    }
+  }
+
+  .Btn__Container {
+    width: 100%;
+    opacity: 0.9;
+  }
+}
+
+#Add__Notes.active {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  .Btn__Container {
+    display: flex;
+    justify-content: flex-start;
+    .Notes__Btn {
+      margin-right: 25px;
+    }
+    #Hide__Btn {
+      margin-left: auto;
+    }
+  }
+}

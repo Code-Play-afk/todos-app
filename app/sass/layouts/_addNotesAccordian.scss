@@ -1,0 +1,26 @@
+@use "../abstracts" as abs;
+
+#Add__Notes {
+  transition: 300ms;
+  .Title__Container {
+    overflow: hidden;
+    height: 0;
+    transition: 300ms;
+  }
+
+  .Btn__Container {
+    height: 0px;
+    overflow: hidden;
+    transition: 300ms;
+  }
+}
+
+#Add__Notes.active {
+  height: 150px;
+  .Add__Notes__Items {
+    height: fit-content;
+  }
+  .Btn__Container {
+    height: fit-content;
+  }
+}

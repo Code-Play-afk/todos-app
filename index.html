@@ -5,33 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="dist/css/main.min.css" />
-    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="app/_img/icon.png" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/468b39fa04.js"
+      crossorigin="anonymous"
+    ></script>
     <title>My Notes</title>
   </head>
   <body>
     <div class="Notes__App">
-      <h1 id="Title">My Notes:</h1>
-      <div id="Add__Notes">
-        <div class="Add__Notes__Items">
+      <!-- <h1 id="Title">My Notes:</h1> -->
+      <div id="Add__Notes" class="Add__Notes">
+        <div class="Add__Notes__Items Title__Container">
           <input
             id="Notes__Title"
             type="text"
             name="notes-task"
-            placeholder="Note Title Here"
+            placeholder="Title"
             required
           />
         </div>
-        <div class="Add__Notes__Items">
-          <textarea
+        <div class="Add__Notes__Items Description__Container">
+          <input
             id="Notes__Description"
             name="notes-description"
-            placeholder="Note Description Here"
+            placeholder="Take a Note.."
+            type="text"
             required
-          ></textarea>
+          />
         </div>
         <div class="Add__Notes__Items Btn__Container">
-          <button id="Add__Notes__Btn" class="Notes__Btn">Add Note</button>
-          <button id="Clear__Notes__Btn" class="Notes__Btn">Clear</button>
+          <button id="Add__Notes__Btn" class="Notes__Btn Add__Notes__Items">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <button id="Clear__Notes__Btn" class="Notes__Btn Add__Notes__Items">
+            <i class="fa-solid fa-brush"></i>
+          </button>
+          <button id="Hide__Btn" class="Notes__Btn Add__Notes__Items">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
         </div>
       </div>
       <div id="Active__Notes"></div>
@@ -40,6 +52,6 @@
       <h2>My Notes App</h2>
       <p>2023 &#169; Abhishek Shrestha<br />Made in Javascript</p>
     </footer>
-    <script src="app/index.js"></script>
+    <script src="app/app.js"></script>
   </body>
 </html>

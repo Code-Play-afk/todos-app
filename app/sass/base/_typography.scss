@@ -5,6 +5,8 @@ h2,
 h3,
 label {
   font-family: abs.$primary-font;
+  word-wrap: break-word;
+  line-height: 1.2em;
 }
 
 p,
@@ -15,12 +17,16 @@ textarea {
   word-wrap: break-word;
 }
 body {
-  letter-spacing: 0.2rem;
-  line-height: 1.9em;
+  letter-spacing: 2px;
+  line-height: 1.6em;
   padding-bottom: 80px;
   font-size: 100%;
 }
-button {
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+input {
+  font-size: 1em;
+}
+input::placeholder {
+  font-size: 16px;
+  color: abs.$font-color;
+  opacity: 0.8;
 }

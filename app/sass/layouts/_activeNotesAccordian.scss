@@ -1,0 +1,16 @@
+#Active__Notes {
+  .Notes__Items {
+    p {
+      overflow: hidden;
+      height: 0;
+    }
+  }
+  .Notes__Items.active {
+    h3::after {
+      transform: rotate(180deg);
+    }
+    p {
+      height: fit-content;
+    }
+  }
+}

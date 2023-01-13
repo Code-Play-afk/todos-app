@@ -1,7 +1,7 @@
 @use "../abstracts" as abs;
 
 body {
-  background-color: abs.$primary-bg-color;
+  background-color: abs.$secondary-bg-color;
 }
 
 div {
@@ -17,5 +17,5 @@ button,
 input,
 textarea {
   color: abs.$font-color;
-  background-color: rgb(223, 233, 241);
+  background-color: abs.$secondary-bg-color;
 }

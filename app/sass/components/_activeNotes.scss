@@ -1,0 +1,55 @@
+#Active__Notes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  transition: 500ms;
+  @media (min-width: 650px) {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    // gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .Notes__Items {
+    max-width: 500px;
+    min-width: 300px;
+    flex: 1;
+    width: 100%;
+    // margin: 0 auto;
+    background-color: white;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(black, 0.4);
+    margin-bottom: 10px;
+    position: relative;
+    h3 {
+      width: 100%;
+      font-size: 18px;
+      margin-bottom: 5px;
+      position: relative;
+    }
+    h3::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f103";
+      position: absolute;
+      font-size: 18px;
+      right: -5px;
+      cursor: pointer;
+      transition: 500ms;
+    }
+
+    p {
+      font-size: 16px;
+      background: inherit;
+      margin-bottom: 7px;
+      transition: 500ms;
+    }
+  }
+  .Notes__Items:hover {
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.5);
+  }
+}
