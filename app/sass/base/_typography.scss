@@ -1,0 +1,26 @@
+@use "../abstracts" as abs;
+
+h1,
+h2,
+h3,
+label {
+  font-family: abs.$primary-font;
+}
+
+p,
+button,
+input,
+textarea {
+  font-family: abs.$secondary-font;
+  word-wrap: break-word;
+}
+body {
+  letter-spacing: 0.2rem;
+  line-height: 1.9em;
+  padding-bottom: 80px;
+  font-size: 100%;
+}
+button {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}

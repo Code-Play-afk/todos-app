@@ -1,0 +1,35 @@
+@use "../abstracts" as abs;
+
+.Notes__Btn {
+  height: 40px;
+  width: 120px;
+  background-color: abs.$secondary-bg-color;
+}
+#Add__Notes__Btn {
+  color: abs.$button-color-green;
+  border: 1px solid abs.$button-color-green;
+}
+#Add__Notes__Btn:hover {
+  color: abs.$secondary-bg-color;
+  background: abs.$button-color-green;
+  border: 1px solid abs.$button-color-green;
+}
+#Clear__Notes__Btn {
+  color: abs.$button-color-red;
+  border: 1px solid abs.$button-color-red;
+}
+#Clear__Notes__Btn:hover {
+  color: abs.$secondary-bg-color;
+  background: abs.$button-color-red;
+  border: 1px solid abs.$button-color-red;
+}
+.Delete__Btn {
+  margin-top: 10px;
+  background-color: abs.$secondary-bg-color;
+  text-decoration: underline;
+  color: abs.$button-color-red;
+  display: block;
+}
+.Delete__Btn:hover {
+  transform: scale(1.08);
+}

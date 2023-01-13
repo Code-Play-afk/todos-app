@@ -1,0 +1,21 @@
+@use "../abstracts" as abs;
+
+body {
+  background-color: abs.$primary-bg-color;
+}
+
+div {
+  background-color: abs.$secondary-bg-color;
+}
+h1,
+h2,
+h3 {
+  color: abs.$accent-color;
+}
+p,
+button,
+input,
+textarea {
+  color: abs.$font-color;
+  background-color: rgb(223, 233, 241);
+}

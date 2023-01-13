@@ -1,0 +1,31 @@
+@use "../abstracts" as abs;
+body {
+  position: relative;
+}
+footer {
+  background: abs.$accent-color;
+  padding: 80px 0;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  h2 {
+    color: rgb(235, 235, 239);
+    text-align: center;
+    background-color: abs.$accent-color;
+    line-height: 42px;
+    letter-spacing: 0.4rem;
+  }
+  p {
+    color: rgb(235, 235, 239);
+    background-color: abs.$accent-color;
+    line-height: 20px;
+    letter-spacing: 0.3rem;
+    text-align: center;
+  }
+}

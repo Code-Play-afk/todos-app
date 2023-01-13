@@ -42,16 +42,16 @@ function removeToDo(idToDelete) {
 
 renderToDo();
 function renderToDo() {
-  const container = document.getElementById("Container");
+  const container = document.getElementById("Active__Notes");
   container.innerHTML = "";
   toDos.forEach(function (toDo) {
-    const container = document.getElementById("Container");
+    const container = document.getElementById("Active__Notes");
     let element = document.createElement("div");
-    element.className = "Todo__Items";
+    element.className = "Notes__Items";
     element.innerHTML = `<h3>${toDo.task}</h3><p>${toDo.description}</p>`;
     const deleteBtn = document.createElement("button");
     deleteBtn.classList.add("Delete__Btn");
-    deleteBtn.innerText = "Delete Note";
+    deleteBtn.innerText = "Delete";
     deleteBtn.addEventListener("click", deleteToDo);
     deleteBtn.id = toDo.id;
     container.appendChild(element);
@@ -63,9 +63,9 @@ function renderToDo() {
 
 // add To Do
 function addToDo() {
-  const todoTitle = document.getElementById("Todo__Title");
+  const todoTitle = document.getElementById("Notes__Title");
   const title = todoTitle.value;
-  const todoDescription = document.getElementById("Todo__Description");
+  const todoDescription = document.getElementById("Notes__Description");
   const date = todoDescription.value;
   if (title != "") {
     createToDo(title, date);
@@ -75,8 +75,8 @@ function addToDo() {
 
 // clear Input box
 function clearInput() {
-  const todoTitle = document.getElementById("Todo__Title");
-  const todoDescription = document.getElementById("Todo__Description");
+  const todoTitle = document.getElementById("Notes__Title");
+  const todoDescription = document.getElementById("Notes__Description");
   todoTitle.value = "";
   todoDescription.value = "";
 }
@@ -90,8 +90,8 @@ function deleteToDo(e) {
 }
 
 // Event handlers
-const addToDoButton = document.querySelector("#Add__Todos__Btn");
-const clearToDoButton = document.querySelector("#Clear__Todos__Btn");
+const addToDoButton = document.querySelector("#Add__Notes__Btn");
+const clearToDoButton = document.querySelector("#Clear__Notes__Btn");
 addToDoButton.addEventListener("click", addToDo);
 addToDoButton.addEventListener("click", clearInput);
 clearToDoButton.addEventListener("click", clearInput);

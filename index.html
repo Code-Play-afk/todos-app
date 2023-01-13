@@ -4,40 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dist/css/main.min.css" />
     <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
     <title>My Notes</title>
   </head>
   <body>
-    <div class="Todos__App">
+    <div class="Notes__App">
       <h1 id="Title">My Notes:</h1>
-      <div id="Add__Todos">
-        <div class="Add__Todos__Items Todos__Task">
+      <div id="Add__Notes">
+        <div class="Add__Notes__Items">
           <input
-            id="Todo__Title"
+            id="Notes__Title"
             type="text"
-            name="todo-task"
+            name="notes-task"
             placeholder="Note Title Here"
+            required
           />
         </div>
-        <div class="Add__Todos__Items Todos__Description">
+        <div class="Add__Notes__Items">
           <textarea
-            id="Todo__Description"
-            name="todo-description"
-            placeholder="Task Description Here"
+            id="Notes__Description"
+            name="notes-description"
+            placeholder="Note Description Here"
+            required
           ></textarea>
         </div>
-        <div class="Add__Todos__Items Btn__Container">
-          <button id="Add__Todos__Btn" class="Todos__Btn">Add Note</button>
-          <button id="Clear__Todos__Btn" class="Todos__Btn">Clear</button>
+        <div class="Add__Notes__Items Btn__Container">
+          <button id="Add__Notes__Btn" class="Notes__Btn">Add Note</button>
+          <button id="Clear__Notes__Btn" class="Notes__Btn">Clear</button>
         </div>
       </div>
-      <div id="Container"></div>
+      <div id="Active__Notes"></div>
     </div>
     <footer>
       <h2>My Notes App</h2>
       <p>2023 &#169; Abhishek Shrestha<br />Made in Javascript</p>
     </footer>
-    <script src="index.js"></script>
+    <script src="app/index.js"></script>
   </body>
 </html>
