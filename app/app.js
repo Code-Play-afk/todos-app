@@ -59,22 +59,14 @@ function renderNote() {
   });
 }
 
-function showNoteAccordian(e) {
-  if (!e.target.matches(".fa-xmark")) {
-    document.getElementById("Add__Notes").classList.add("active");
-  }
+function renderNoteAccordian(e) {
+  document.getElementById("Add__Notes").classList.toggle("active");
   console.log(e.target);
-}
-
-function hideNoteAccordian(e) {
-  document.getElementById("Add__Notes").classList.remove("active");
-  console.log(e.target + " 12");
 }
 
 function renderActiveNoteAccordian(e) {
-  if (e.target.matches(".Title"))
-    e.target.parentElement.classList.toggle("active");
   console.log(e.target);
+  e.target.parentElement.classList.toggle("active");
 }
 
 // *Controller
@@ -110,14 +102,14 @@ function deleteNote(e) {
 // Event handlers
 const addNoteButton = document.querySelector("#Add__Notes__Btn");
 const clearNoteButton = document.querySelector("#Clear__Notes__Btn");
-const addNotes = document.getElementById("Add__Notes");
-const hideNotes = document.getElementById("Hide__Btn");
-const activeNotes = document.getElementById("Active__Notes");
-
+const toggleNotes = document.getElementById("Hide__Btn");
+const activeNotes = document.getElementsByClassName("Title");
+console.log(activeNotes);
 addNoteButton.addEventListener("click", addNote);
 addNoteButton.addEventListener("click", clearInput);
 clearNoteButton.addEventListener("click", clearInput);
 renderNote();
-addNotes.addEventListener("click", showNoteAccordian);
-hideNotes.addEventListener("click", hideNoteAccordian);
-activeNotes.addEventListener("click", renderActiveNoteAccordian);
+toggleNotes.addEventListener("click", renderNoteAccordian);
+for (i = 0; i < activeNotes.length; i++) {
+  activeNotes[i].addEventListener("click", renderActiveNoteAccordian);
+}

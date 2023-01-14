@@ -1,32 +1,53 @@
 @use "../abstracts" as abs;
 
+#Hide__Btn {
+  color: abs.$pink-color;
+  filter: grayscale(50%);
+  font-size: 18px;
+  cursor: pointer;
+  transition: filter 150ms ease-in-out;
+}
+#Hide__Btn:hover {
+  filter: grayscale(0%);
+}
+
 button {
+  background-color: transparent;
   padding: 5px;
+  filter: grayscale(20%);
   i {
     font-size: 20px;
-    font-weight: bold;
-    color: abs.$font-color;
   }
   margin-top: 5px;
   margin-right: 10px;
-  opacity: 0.8;
+  transition: filter 150ms ease-in-out;
 }
+
+#Add__Notes__Btn {
+  color: abs.$green-color;
+}
+
 #Clear__Notes__Btn {
   i {
     font-size: 20px;
+    color: abs.$red-color;
     transform: rotate(180deg);
   }
 }
 
 .Delete__Btn {
   display: block;
-
+  filter: grayscale(40%);
   margin-top: 12px;
   i {
+    color: abs.$red-color;
     font-size: 18px;
   }
 }
 button:hover {
-  transform: scale(1.3);
+  transform: scale(1.2) rotate(10deg);
   opacity: 1;
+}
+button:active {
+  filter: contrast(1.8);
 }
